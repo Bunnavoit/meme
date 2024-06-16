@@ -31,3 +31,32 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.shining-text {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 4xl;
+  text-transform: uppercase;
+  background: linear-gradient(
+    to right,
+    #ffffff 20%,
+    #f0e68c 40%,
+    #ffffff 60%,
+    #f0e68c 80%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
